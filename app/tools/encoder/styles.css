@@ -1,0 +1,31 @@
+body {
+  background: var(--main-bg-color);
+  color: var(--main-fg-color);
+  font-weight: light;
+  text-rendering: optimizeLegibility;
+  text-size-adjust: 100%;
+}
+
+#encoder-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#encoder {
+  background: var(--main-bg-color);
+  color: var(--main-fg-color);
+  font-size: 40px;
+  outline: 0;
+  width: 100%;
+  font-family: 'LuciV1', 'Courier New', Courier, monospace;
+  font-size: 50px;
+  text-align: center;
+  margin: 0 20px;
+}
+
+#encoder::placeholder {
+  font-family: 'Courier New', Courier, monospace;
+  color: var(--main-fg-color);
+}
