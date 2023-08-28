@@ -6,6 +6,16 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --main-bg-color: rgb(180 104 44);
+  --main-fg-color: rgb(248 244 240);
+  --main-fg-color-lightened: rgba(248 244 240 0);
+}
+
+@font-face {
+  font-family: LuciV1;
+  font-style: normal;
+  font-weight: normal;
+  src: url(../fonts/LuciV1-Regular.otf);
 }
 
 @media (prefers-color-scheme: dark) {
