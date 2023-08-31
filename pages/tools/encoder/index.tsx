@@ -1,6 +1,5 @@
 'use client'
 import { useState } from "react";
-import "./styles.css";
 
 export default function Encoder() {
   const [encodedText, setEncodedText] = useState("");
@@ -14,8 +13,10 @@ export default function Encoder() {
   }
 
   return (
-    <div id="encoder-wrapper">
-      <input id="encoder" type="text" autoFocus value={encodedText} onChange={handleChange} placeholder="Start typing" />
+    <div id="page-container-centered">
+      <div id="encoder-wrapper">
+        <input id="encoder" type="text" autoFocus value={encodedText} onChange={handleChange} placeholder="Start typing" />
+      </div>
     </div>
   )
 }

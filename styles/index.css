@@ -1,30 +1,83 @@
-html {
-  align-items: center;
-  display: flex;
-  justify-content: center;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@supports (font: -apple-system-body) and (-webkit-appearance: none) {
+  img[loading='lazy'] {
+    clip-path: inset(0.6px);
+  }
 }
 
-body {
-  background: var(--main-bg-color);
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 180, 104, 44;
+  --background-end-rgb: 180, 104, 44;
+  --main-bg-color: rgb(180 104 44);
+  --main-fg-color: rgb(248 244 240);
+  -webkit-font-smoothing: antialiased;
+}
+
+@font-face {
+  font-family: LuciV1;
+  font-style: normal;
+  font-weight: normal;
+  src: url(../fonts/LuciV1-Regular.otf);
+}
+
+#lucipedia-logo {
+  width: 240px;
+  height: 80px;
+}
+
+#page-container-centered {
+  align-items: top;
+  display: flex;
+  justify-content: center;
+  background-color: var(--main-bg-color);
+  height: 100vh;
   color: var(--main-fg-color);
   font-size: 30px;
   font-weight: light;
   line-height: 36px;
   text-rendering: optimizeLegibility;
   text-size-adjust: 100%;
-  width: 300px;
+  padding-top: 20px;
 }
 
-h1,
-h2 {
-  font-weight: inherit;
+/* encoder */
+
+#encoder-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
-.App {
+#encoder {
+  background: var(--main-bg-color);
+  color: var(--main-fg-color);
+  outline: 0;
+  width: 100%;
+  font-family: 'LuciV1', 'Courier New', Courier, monospace;
+  font-size: 50px;
+  text-align: center;
+  margin: 0 20px;
+}
+
+#encoder::placeholder {
+  font-family: 'Courier New', Courier, monospace;
+  color: var(--main-fg-color);
+  font-size: 30px;
+}
+
+/* decoder */
+
+#decoder-container {
   align-items: center;
   display: flex;
   flex-direction: column;
   text-align: center;
+  width: 300px;
 }
 
 #decoder {
@@ -39,14 +92,13 @@ h2 {
   width: 300px;
 }
 
-h1 {
+#decoder-container h1 {
   font-size: 56px;
   margin-bottom: 30px;
-  margin-top: 50px;
   cursor: pointer;
 }
 
-h2 {
+#decoder-container h2 {
   font-size: 17px;
   width: 300px;
 }
@@ -56,7 +108,7 @@ h2 {
   margin-top: 30px;
 }
 
-h2,
+#decoder-container h2,
 #reveal,
 .alphabet,
 #reveal-title {
@@ -67,7 +119,7 @@ h2,
   font-size: 40px;
 }
 
-h1,
+#decoder-container h1,
 #decoder,
 .lucibet {
   font-family: "LuciV1", "Courier New", Courier, monospace;

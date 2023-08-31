@@ -1,14 +1,14 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  async redirects() {
-    return [
+module.exports = {
+  images: {
+    formats: ['image/avif', 'image/webp'],
+    domains: ['res.cloudinary.com'],
+    remotePatterns: [
       {
-        source: '/',
-        destination: '/tools/decoder',
-        permanent: true,
+        protocol: 'https',
+        hostname: 'ipfs.pixura.io',
+        port: '',
+        pathname: '/ipfs/**',
       },
-    ]
-  },
+    ],
+  }
 }
-
-module.exports = nextConfig
