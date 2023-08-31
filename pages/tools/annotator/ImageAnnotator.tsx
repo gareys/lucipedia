@@ -1,4 +1,4 @@
-import Annotation, { PointSelector } from 'react-image-annotation-with-zoom';
+// import Annotation, { PointSelector } from 'react-image-annotation-with-zoom';
 import { useState } from "react";
 
 type Annotation = { geometry: any; data: any; }
@@ -26,16 +26,18 @@ export function ImageAnnotator() {
     }]);
   }
 
-  return (
-    <Annotation
-      src="https://arweave.net/BT5nPvSKt5QV3GsI2lzXFWuqa38wkF-WSTa9YIRgr2s"
-      alt="Two pebbles anthropomorphized holding hands"
-      annotations={annotations}
-      type="POINT"
-      value={annotation}
-      onChange={onChange}
-      onSubmit={onSubmit}
-      movingMode
-    />
-  );
+  return null;
+
+  // return (
+  //   <Annotation
+  //     src="https://arweave.net/BT5nPvSKt5QV3GsI2lzXFWuqa38wkF-WSTa9YIRgr2s"
+  //     alt="Two pebbles anthropomorphized holding hands"
+  //     annotations={annotations}
+  //     type="POINT"
+  //     value={annotation}
+  //     onChange={onChange}
+  //     onSubmit={onSubmit}
+  //     movingMode
+  //   />
+  // );
 }
