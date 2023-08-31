@@ -9,7 +9,7 @@ type LegendProps = {
 }
 
 export default function Legend({ handleLetterClick }: LegendProps) {
-  return CHARS_ARRAYS.map((charArr) =>
+  const charTables = CHARS_ARRAYS.map((charArr) =>
     <table key={`${charArr.join('')}-table`} className="table-auto" width="300">
       <tbody>
         <tr>
@@ -33,5 +33,9 @@ export default function Legend({ handleLetterClick }: LegendProps) {
         </tr>
       </tbody>
     </table>
+  )
+
+  return (
+    <div>{charTables}</div>
   )
 }

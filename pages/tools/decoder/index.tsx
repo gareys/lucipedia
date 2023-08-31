@@ -1,8 +1,6 @@
 'use client'
-import dynamic from 'next/dynamic'
 import { useState } from "react";
-
-const NoSSRLegend = dynamic(() => import('./Legend'), { ssr: false })
+import Legend from "./Legend";
 
 export default function Encoder() {
   const [revealedText, setRevealedText] = useState("");
@@ -32,7 +30,7 @@ export default function Encoder() {
         </h1>
         <h2>Type text or press symbols to decode a message from luci</h2>
         <div id="legend">
-          <NoSSRLegend handleLetterClick={handleLetterClick} />
+          <Legend handleLetterClick={handleLetterClick} />
         </div>
         <div id="decoder-wrapper">
           <input
