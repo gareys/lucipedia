@@ -3,7 +3,7 @@ import { useState } from "react";
 
 type Annotation = { geometry: any; data: any; }
 
-export function ImageAnnotator() {
+export default function ImageAnnotator() {
   const [annotations, setAnnotations] = useState<Annotation[]>([])
   const [annotation, setAnnotation] = useState<Annotation | {}>({})
 
